@@ -62,3 +62,87 @@ body {
 
   line-height: 1.5;
 }
+
+.newsletter-cta > .content {
+  display: grid;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.newsletter-cta .title {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+}
+
+.checkmark-list {
+  display: grid;
+  gap: 0.625rem;
+}
+
+.checkmark-list li {
+  display: grid;
+  grid-template-columns: 2.5rem auto;
+}
+
+.checkmark-list li::before {
+  content: url("./assets/images/icon-list.svg");
+}
+
+.newsletter-cta form {
+  display: grid;
+  gap: 1.5rem;
+  margin-block-start: 1.25rem;
+  isolation: isolate;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+}
+
+.form-group input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: inherit;
+  font-weight: var(--fw-regular);
+  border: 1px solid var(--clr-neutral-200);
+}
+
+.form-group input::placeholder {
+  color: var(--clr-neutral-200);
+}
+
+.button {
+  background: var(--clr-neutral-800);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font: inherit;
+  padding: 1rem;
+  border: 0;
+  outline: 0;
+  border-radius: 0.5rem;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: linear-gradient(
+    -90deg,
+    var(--clr-accent-400),
+    var(--clr-accent-500)
+  );
+  position: relative;
+}
+
+.button:hover::after,
+.button:focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  translate: 0 1.5rem;
+  filter: blur(1rem);
+  opacity: 0.25;
+  z-index: -1;
+}
